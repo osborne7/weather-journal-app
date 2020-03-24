@@ -1,89 +1,133 @@
-body{
-    background: #fffff8;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+body {
+    background: linear-gradient(rgba(250, 238, 216, 0.9),
+    rgba(250, 238, 216, 0.9)), 
+    url('https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=80');
+    display: flex;
+    background-size: contain;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
-#app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
-    color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+#app {
+    color: #00002f;
+    font-size: 1em;
 }
 
-.holder{
-
+.old-entry {
+    margin: 1em;
 }
 
-.entry{
-    background: rgba(59, 74, 107, .4);
+#zip {
+    border: 1px solid;
+    margin: 0em 0.5em;
+    padding: 0.5em;
 }
 
-#entryHolder{
-
+#feelings {
+    margin: 0em 0.5em;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.7em;
 }
 
-#date{
-
+.entry {
+    background: rgba(211,235,242, 0.2);
+    display: block;
 }
 
-#temp{
-
+.response {
+    padding: 0.5em;
 }
 
-#content{
+.date {
+    color: #8ca0c5;
+    font-size: 1.3em;
+}
 
+.temp {
+    font-size: 1.5em;
+    color:#bc9e93;
 }
 
 .headline {
-
+    font-family: 'Amatic SC', cursive;
+    font-size: 5em;
+    padding: 0.7em;
+    text-align: center;
+    display: block;
 }
-.title{
 
+#title {
+    margin: 0.5em;
+    font-size: 4.5em;
+    padding: 0.5em;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    border-top: 1px solid #fdfde2;
+}
+
+.content {
+    font-size: 1.7em;
+}
+
+.entry-holder {
+    border: 1px solid #fdfde2;
+    padding: 1em;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
+label {
     display:block;
-    font-size: 27px;
+    font-size: 2em;
+    padding: 0.5em;
 }
 
-input{
+input {
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
-    color: #f0d43a;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    background: rgba(255, 199, 178, 0.2);
+    color: #708090;
+    font-size: 1.7em;
+    font-family: 'Amatic SC', cursive;
     border: none;
 }
 
-button{
-    width: 400px;
-    height: 100px;
-    background: #3b4a6b;
-    color: #f0d43a;
-    font-size: 26px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
-    box-shadow: 2px 4px 5px #444;
+#zip:hover, #feelings:hover {
+    background: rgba(205,227,230, 0.2);
+    transition: all 0.5s;
 }
-h1{
+
+button {
+    width: 7em;
+    height: 3em;
+    background: rgba(255,246,223, 0.8);
+    color: #8ca0c5;
+    font-size: 2.5em;
+    font-family: 'Amatic SC', cursive;
+    border: none;
+    box-shadow: 1px 1px 1.4px #444;
+    display: block;
+    margin: 1em 0.5em 2em;
+}
+
+button:hover {
+    background: rgba(246,255,237, 0.5);
+    border: 3px solid;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+h1 {
     font-size: 36px;
 }
 
-textarea{
-    background:#22b2da;
-    color: #f0d43a;
+textarea {
+    padding: 0.5em;
+    background: rgba(255, 199, 178, 0.2);
+    color: #708090;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
 }
+
 /* Reset style for HTML element on active to have no border*/
 input:focus,
 select:focus,
@@ -93,19 +137,16 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
+    color: #708090; 
+    /* font-family: 'Oswald', sans-serif; */
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
+    color: #708090; 
+    /* font-family: 'Oswald', sans-serif; */
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
-    color: #f0d43a; 
-    font-family: 'Oswald', sans-serif;
-
-} 
+    color: #708090; 
+    /* font-family: 'Oswald', sans-serif; */
+}
