@@ -2,7 +2,6 @@ body {
     background: linear-gradient(rgba(250, 238, 216, 0.9),
     rgba(250, 238, 216, 0.9)), 
     url('https://images.unsplash.com/photo-1534794048419-48e110dca88e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=80');
-    display: flex;
     background-size: contain;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -26,11 +25,11 @@ body {
     margin: 0em 0.5em;
     font-family: 'Amatic SC', cursive;
     font-size: 1.7em;
+    width: 90%;
 }
 
 .entry {
     background: rgba(211,235,242, 0.2);
-    display: block;
 }
 
 .response {
@@ -44,21 +43,27 @@ body {
 
 .temp {
     font-size: 1.5em;
-    color:#bc9e93;
+    color: #bc9e93;
 }
 
 .headline {
     font-family: 'Amatic SC', cursive;
     font-size: 5em;
-    padding: 0.7em;
+    padding: 1em;
     text-align: center;
-    display: block;
+}
+
+.zip {
+    margin: 1em;
+}
+
+.feel {
+    margin: 1em;
 }
 
 #title {
     margin: 0.5em;
     font-size: 4.5em;
-    padding: 0.5em;
     text-align: center;
     font-family: 'Amatic SC', cursive;
     border-top: 1px solid #fdfde2;
@@ -73,15 +78,13 @@ body {
     padding: 1em;
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
 label {
-    display:block;
+    display: block;
     font-size: 2em;
     padding: 0.5em;
 }
 
 input {
-    display:block;
     height: 60px;
     width: 320px;
     background: rgba(255, 199, 178, 0.2);
@@ -105,19 +108,14 @@ button {
     font-family: 'Amatic SC', cursive;
     border: none;
     box-shadow: 1px 1px 1.4px #444;
-    display: block;
-    margin: 1em 0.5em 2em;
+    margin: 0.5em 1em;
 }
 
 button:hover {
     background: rgba(246,255,237, 0.5);
-    border: 3px solid;
+    border: 1px solid;
     transition: all 0.2s;
     cursor: pointer;
-}
-
-h1 {
-    font-size: 36px;
 }
 
 textarea {
@@ -125,7 +123,6 @@ textarea {
     background: rgba(255, 199, 178, 0.2);
     color: #708090;
     font-size: 20px;
-    /* font-family: 'Oswald', sans-serif; */
 }
 
 /* Reset style for HTML element on active to have no border*/
@@ -138,15 +135,12 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
     color: #708090; 
-    /* font-family: 'Oswald', sans-serif; */
 } 
   
 :-ms-input-placeholder { /* Internet Explorer 10-11 */ 
     color: #708090; 
-    /* font-family: 'Oswald', sans-serif; */
 } 
   
 ::-ms-input-placeholder { /* Microsoft Edge */ 
     color: #708090; 
-    /* font-family: 'Oswald', sans-serif; */
 }

@@ -3,8 +3,8 @@ let d = new Date();
 let newDate = (d.getMonth()+ 1)+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //API setup
-let baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-let apiKey = '&APPID=de063bd15d383b20f99e0db333194bf8';
+const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+const apiKey = '&APPID=de063bd15d383b20f99e0db333194bf8';
 
 //POST request
 const postData = async (url = '', data = {})=>{
@@ -45,6 +45,7 @@ function execute(e) {
     const userFeelings = document.getElementById('feelings').value;
 
     getZip(baseURL, userZip, apiKey)
+
     
     //chain post request to add data from API
     .then(function(userData) {
@@ -65,6 +66,7 @@ function execute(e) {
 //retrieve data from the app, select necessary DOM elements, and update their values
  const updateUI = async () => {
     const request = await fetch('/all');
+
     try{
         const allData = await request.json();
 
@@ -93,4 +95,4 @@ function execute(e) {
       } catch(error) {
         console.log('error', error);
     }
- }
+ }                  
