@@ -18,7 +18,6 @@ const postData = async (url = '', data = {})=>{
 });
     try {
         const newData = await response.json();
-        console.log(newData);
         return newData;
     }catch(error) {
         console.log('error', error);
@@ -50,11 +49,14 @@ function execute(e) {
     //chain post request to add data from API
     .then(function(userData) {
         //add data to post request
-        let kelvinTemp = userData.main.temp;
-        let imperialTemp = ((kelvinTemp - 273.15) * 9/5 + 32);
-        let roundedTemp = Math.floor(imperialTemp);
-
-        postData('/addData', {temperature: roundedTemp, date: newDate, userResponse: userFeelings});
+        if (userZip) {
+            let kelvinTemp = userData.main.temp;
+            let imperialTemp = ((kelvinTemp - 273.15) * 9/5 + 32);
+            let roundedTemp = Math.floor(imperialTemp);
+            postData('/addData', {temperature: roundedTemp, date: newDate, userResponse: userFeelings});
+        } else {
+            postData('/addData', {temperature: 'mystery', date: newDate, userResponse: userFeelings});
+        }
         })
         //update the UI dynamically
         .then(function() {
