@@ -3,7 +3,7 @@ let d = new Date();
 let newDate = (d.getMonth()+ 1)+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //API setup
-const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&APPID=de063bd15d383b20f99e0db333194bf8';
 
 //POST request
