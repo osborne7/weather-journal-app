@@ -48,14 +48,15 @@ function execute(e) {
     
     //chain post request to add data from API
     .then(function(userData) {
+        console.log(userData);
         //add data to post request
         if (userZip) {
             let kelvinTemp = userData.main.temp;
             let imperialTemp = ((kelvinTemp - 273.15) * 9/5 + 32);
             let roundedTemp = Math.floor(imperialTemp);
-            postData('/addData', {temperature: roundedTemp, date: newDate, userResponse: userFeelings});
+            postData('http://localhost:8000/addData', {temperature: roundedTemp, date: newDate, userResponse: userFeelings});
         } else {
-            postData('/addData', {temperature: 'mystery', date: newDate, userResponse: userFeelings});
+            postData('http://localhost:8000/addData', {temperature: 'mystery', date: newDate, userResponse: userFeelings});
         }
         })
         //update the UI dynamically
